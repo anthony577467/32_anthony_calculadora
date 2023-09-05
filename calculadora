@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class calculadora {
+    private int a;
+    private int b;
+    private int mul;
+
+    public calculadora(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public void multiplicar() {
+        mul = a * b;
+        System.out.println("mul: " + mul);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        calculadora miCalculadora = new calculadora(numero1, numero2);
+        miCalculadora.multiplicar();
+
+        // Cerrar el scanner cuando ya no se necesite.
+        scanner.close();
+    }
+}
